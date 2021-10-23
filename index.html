@@ -15,12 +15,12 @@
 
     main {
       text-align: center;
-      max-width: 700px;
+      max-width: 740px;
       margin: 0 auto;
     }
 
     .char-option {
-      background: lightgray;
+      background: white;
       border: none;
       padding: 8px;
       font-size: 16px;
@@ -64,6 +64,12 @@
       text-align: left;
       transition: 100ms all;
       position: relative;
+      padding: 16px;
+    }
+
+    #options-root:hover {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.8);
     }
 
     .particle {
@@ -78,10 +84,6 @@
       transition: 1000ms all;
       transform: translate(-50%, -50%);
       pointer-events: none;
-    }
-
-    #options-root:hover {
-      opacity: 1;
     }
 
     @keyframes bounce {
