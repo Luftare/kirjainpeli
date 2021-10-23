@@ -1,0 +1,104 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kirjainpeli</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+    }
+
+    main {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .char-option {
+      background: lightgray;
+      border: none;
+      padding: 8px;
+      font-size: 16px;
+      text-align: center;
+      vertical-align: middle;
+      width: 56px;
+      height: 56px;
+      margin: 4px;
+    }
+
+    .char-option[data-selected] {
+      background: lightgreen;
+    }
+
+    .char {
+      font-size: 280px;
+      font-weight: bold;
+      background: none;
+      border: none;
+    }
+
+    .char::selection {
+      background: transparent;
+    }
+
+    #char-root {
+      margin: 100px;
+      animation: bounce 0.6s infinite alternate;
+    }
+
+    .preset {
+      margin: 8px;
+      padding: 16px;
+      background: none;
+      border: none;
+      text-decoration: underline;
+    }
+
+    #options-root {
+      opacity: 0.3;
+      text-align: left;
+      transition: 100ms all;
+      position: relative;
+    }
+
+    .particle {
+      position: absolute;
+      display: block;
+      width: 300px;
+      height: 300px;
+      border-radius: 9999px;
+      background-color: lightgreen;
+      left: 50%;
+      top: 50%;
+      transition: 1000ms all;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    #options-root:hover {
+      opacity: 1;
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <div id="char-root"></div>
+      <div id="options-root"></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
